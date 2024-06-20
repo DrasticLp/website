@@ -1,0 +1,19 @@
+{
+    "files.exclude": {
+        "node_modules": true,
+        ".storybook": true,
+        ".eslintignore": true,
+        ".eslintrc.cjs": true,
+        ".nvmrc": true,
+        ".prettierrc": true,
+        ".stylelintignore": true,
+        ".yarnrc.yml": true,
+        "yarn.lock": true,
+        ".yarn": true,
+        ".stylelintrc.json": true,
+        "package-lock.json": true
+    },
+    "[yaml]": {
+        "editor.tabSize": 2
+    }
+}

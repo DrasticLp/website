@@ -1,0 +1,27 @@
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  animation: scroll 10s linear infinite;
+  width: 200%; /* Adjusted to accommodate the translation */
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 20%; /* Adjust based on your layout */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}

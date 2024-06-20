@@ -1,0 +1,8 @@
+node_modules
+src/data/firebaseconfig.ts
+dist
+.storybook
+.yarn
+
+.yarnrc.yml
+package-lock.json

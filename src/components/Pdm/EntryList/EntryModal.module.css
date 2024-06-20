@@ -1,0 +1,44 @@
+.root {
+    --link-height: rem(38px);
+    --indicator-size: rem(10px);
+    --indicator-offset: calc((var(--link-height) - var(--indicator-size)) / 2);
+    position: relative;
+}
+
+.link {
+    display: block;
+    text-decoration: none;
+    color: var(--mantine-color-text);
+    line-height: var(--link-height);
+    font-size: var(--mantine-font-size-sm);
+    height: var(--link-height);
+    border-top-right-radius: var(--mantine-radius-sm);
+    border-bottom-right-radius: var(--mantine-radius-sm);
+    border-left: rem(2px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-4));
+
+    @mixin hover {
+        background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+    }
+}
+
+.linkActive {
+    font-weight: 500;
+    color: light-dark(var(--mantine-color-green-7), var(--mantine-color-green-4));
+}
+
+.indicator {
+    transition: transform 150ms ease;
+    border: rem(2px) solid light-dark(var(--mantine-color-green-7), var(--mantine-color-green-4));
+    background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+    height: var(--indicator-size);
+    width: var(--indicator-size);
+    border-radius: var(--indicator-size);
+    position: absolute;
+    left: calc(var(--indicator-size) / -2 + rem(1));
+}
+.content-box {
+    background-color: #333; /* Gris foncé */
+    border-radius: 10px; /* Ajuste la valeur selon tes besoins */
+    padding: 20px; /* Ajoute du padding pour l'espacement interne */
+    color: #fff; /* Couleur du texte blanc pour le contraste */
+}
