@@ -11,7 +11,7 @@ import { theme } from './theme';
 export default function App() {
     return (
         <DatabaseContextProvider>
-            <MantineProvider theme={theme}>
+            <MantineProvider defaultColorScheme="dark" theme={theme}>
                 <Notifications />
 
                 <Router />

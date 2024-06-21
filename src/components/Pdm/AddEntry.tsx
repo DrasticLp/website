@@ -1,4 +1,4 @@
-import { addNewEntry, idsToNames, useDatabase } from '@/data/Database';
+import { addNewEntry, namesToIds, useDatabase } from '@/data/Database';
 import { Button, Modal, MultiSelect, Switch, Textarea } from '@mantine/core';
 import { notifications } from '@mantine/notifications';
 import { useState } from 'react';
@@ -25,7 +25,7 @@ function AddEntry({
                 data={[...data.students.map.values()]
                     .filter((s) => s.classroom == classroom)
                     .map((s) => s.name)}
-                onChange={(v) => setConcerned(idsToNames(data, v))}
+                onChange={(v) => setConcerned(namesToIds(data, v))}
             />
 
             <Textarea label="Contenu" my={10} onChange={(e) => setContent(e.target.value)} />

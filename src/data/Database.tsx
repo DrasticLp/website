@@ -25,6 +25,8 @@ export const storage = getStorage(firebase);
 export const storageBaseUrl =
     'https://firebasestorage.googleapis.com/v0/b/hx3-faidherbe.appspot.com/o';
 
+const superUsers = ['tarikdu137@gmail.com', 'gloup@hx3.org', 'wazou@hx3.org'];
+
 export const FaidherbeFunction = [
     'Peu Importe',
     'Z',
@@ -154,7 +156,6 @@ export async function updateEntries(entries: EntryMap) {
             private: isprivate,
         });
     }
-
     entries.replace(map);
 }
 
@@ -242,19 +243,19 @@ export function isConnected() {
 }
 
 export function hasPDMAccess() {
-    if (!auth || !auth.currentUser) return false;
+    if (!auth || !auth.currentUser || !auth.currentUser.email) return false;
 
     return (
-        (isConnected() && auth.currentUser.email == 'tarikdu137@gmail.com') ||
+        (isConnected() && superUsers.includes(auth.currentUser.email)) ||
         auth.currentUser.email?.startsWith('pdm')
     );
 }
 
 export function hasPZAccess() {
-    if (!auth || !auth.currentUser) return false;
+    if (!auth || !auth.currentUser || !auth.currentUser.email) return false;
 
     return (
-        (isConnected() && auth.currentUser.email == 'tarikdu137@gmail.com') ||
+        (isConnected() && superUsers.includes(auth.currentUser.email)) ||
         auth.currentUser.email?.startsWith('pz')
     );
 }
