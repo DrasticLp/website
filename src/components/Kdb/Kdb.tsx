@@ -18,7 +18,7 @@ function Kdb() {
                     component="span"
                     gradient={{ from: colors.green[2], to: 'green', deg: 45 }}
                 >
-                    Kharnet de Khlasse
+                    Kharnet de Bienvenue
                 </Text>
             </Title>
             <Stack mt={15} mb={20} align="center">

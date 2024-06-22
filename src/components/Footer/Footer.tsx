@@ -107,6 +107,13 @@ function Footer() {
                     </ActionIcon>
                 </Group>
             </Container>
+            <Container>
+                <Text fz="xs" c="dimmed">
+                    Le contenu de ce site est uniquement à des fins historiques et peut contenir des
+                    éléments sensibles ou inappropriés. Ces éléments ne reflètent pas nécessairement
+                    les opinions actuelles des individus ou de l'établissement.
+                </Text>
+            </Container>
         </footer>
     );
 }
@@ -116,7 +123,9 @@ function UserInfoIcons() {
         <div>
             <Group wrap="nowrap">
                 <Avatar
-                    src={storageBaseUrl + '/classrooms%2F230%2Fprofiles%2Ftarikmesbahi.png'}
+                    src={
+                        storageBaseUrl + '/classrooms%2F230%2Fprofiles%2Ftarikmesbahi.png?alt=media'
+                    }
                     size={94}
                     radius="md"
                 />

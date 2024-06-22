@@ -25,6 +25,7 @@
         "@tabler/core": "1.0.0-beta20",
         "@tabler/icons": "^3.5.0",
         "@tabler/icons-react": "^3.5.0",
+        "@types/node": "^20.14.8",
         "clsx": "^2.1.1",
         "corepack": "^0.28.2",
         "embla-carousel-autoplay": "^8.1.5",
